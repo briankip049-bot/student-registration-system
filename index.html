@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Defines character encoding -->
+<meta charset="utf-8">
+
+<meta name="viewport"content="width=device-width,initial-scale=1.0">
+
+<title>STUDENT REGISTRATION FORM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>student registration form</h1>
+<p>please fill in your details below</p>
+<form id="registrationform">
+<h3>personal information</h3>
+
+<label for="studentname">full name:</label>
+<input type="text" id="studentname"name="studentname"placeholder="enter your fullname"minlength ="3"required><br>
+<label for="admission">admission:</label>
+<input type="text" id"admission"name="admission"placeholder="[e.g BBIT/002/2026"pattern="[A-Za-z0-9/-]{5,20}"title="enter 5 to 20 letters,numbers,slashesorhyphens"required><br>
+
+<label for="email">Email Address:</label>
+<input type="email" id="email"name="email"placeholder="Enter your email"required><br>
+
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number:</label>
+
+            <input type="tel"
+                   id="phone"
+                   name="phone"
+                   placeholder="07XXXXXXXX"
+                   pattern="(07|01)[0-9]{8}"
+                   title="Enter a valid 10-digit Kenyan mobile number"
+                   required><br>
+
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+
+            <input type="date"
+                   id="dob"
+                   name="dob"
+                   required><br>
+<h3>academic information</h3>
+<label>gender:</label>
+<div class="radio-group">
+<input type="radio"id="male"name="gender"value="male"required>
+<label for="male">male</label>
+<input type="radio"id="female"name="gender"value="female">
+<label for="female">female</label>
+</div>
+<label for="course">select course:</label>
+<select id="course"name="courserequired>
+<option value=""choose your course</option>
+<option value="BBIT">bachelor of business information technology</option>
+<option value="BCOM">bachelor of commerce</option>
+<option value="BIT">bachelor of information technology</option>
+<option value="LLB">bachelor of laws</option>
+</select>
+<br>
+<label for="year">year of study:</label>
+<select id="year"name="year"required>
+<option value="">select year</option>
+<option value="year1">year1</option>
+<option value="year 2">year2</option>
+<option value="year 3">year3</option>
+<option value="year4">year4</option>
+</select> 
+<h3>Additional Information</h3>
+
+
+            <!-- Extracurricular Activities -->
+            <label>Extracurricular Activities:</label>
+
+            <div class="checkbox-group">
+
+                <input type="checkbox"
+                       id="football"
+                       name="activities"
+                       value="Football">
+
+                <label for="football">Football</label>
+
+
+                <input type="checkbox"
+                       id="music"
+                       name="activities"
+                       value="Music">
+
+                <label for="music">Music</label>
+
+
+                <input type="checkbox"
+                       id="drama"
+                       name="activities"
+                       value="Drama">
+
+                <label for="drama">Drama</label>
+
+
+                <input type="checkbox"
+                       id="basketball"
+                       name="activities"
+                       value="Basketball">
+
+                <label for="basketball">Basketball</label>
+</div>
+ <!-- Password -->
+            <label for="password">Create Password:</label>
+
+            <input type="password"
+                   id="password"
+                   name="password"
+                   minlength="8"
+                   placeholder="Minimum 8 characters"
+                   required>
+
+
+            <!-- Confirm Password -->
+            <label for="confirmPassword">Confirm Password:</label>
+
+            <input type="password"
+                   id="confirmPassword"
+                   name="confirmPassword"
+                   placeholder="Confirm your password"
+                   required>
+
+
+            <!-- Terms and Conditions -->
+            <div class="terms">
+
+                <input type="checkbox"
+                       id="terms"
+                       name="terms"
+                       required>
+
+                <label for="terms">
+                    I agree to the terms and conditions.
+                </label>
+
+            </div>
+<div class="buttons">
+<button type="submit">register student</button>
+<button type="reset">clear button</button>
+</div></form>
+<p id="message"></p>
+<script src="script.js">script</script>
+
+</body> 
+</html>
